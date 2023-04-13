@@ -1,9 +1,12 @@
 import { Parser } from '@json2csv/plainjs';
 import { appendFileSync } from 'fs';
 import * as dotenv from 'dotenv'
+import {ux} from '@oclif/core'  //https://github.com/oclif/core/blob/main/src/cli-ux/README.md
+
 dotenv.config()
 
-
+const contractId = process.argv[2];
+const limit = process.argv[3] === undefined ? 10 : process.argv[3];
 
 const files = {
     financial: 'output-data/financial-data.csv',
@@ -52,5 +55,3 @@ function appendToCSV(fileName, data) {
   }
 
 
-  clearCSV();
-   getFinancialData('0x28472a58a490c5e09a238847f66a68a47cc76f0f');
