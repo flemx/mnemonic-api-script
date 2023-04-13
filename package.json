@@ -1,11 +1,16 @@
 {
   "name": "mnemonic-api-script",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Damien Fleminks",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@json2csv/node": "^6.1.3",
+    "dotenv": "^16.0.3"
+  }
 }
